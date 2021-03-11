@@ -3,8 +3,9 @@ import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import App from './App';
 import Header from './components/Header';
-import Main from './components/Main';
-import CurrencyCard from './components/CurrencyCard';
+// import Main from './components/Main';
+// import CurrencyCard from './components/CurrencyCard';
+import Footer from './components/Footer';
 
 const mockData = {
   baseCurrency: 'EUR',
@@ -79,3 +80,12 @@ describe('The Header component', () => {
 //     expect(title).toBeInTheDocument();
 //   });
 // })
+
+describe('The footer component', () => {
+  test('should render a footer', () => {
+    render(<Footer />);
+    const footer = screen.getByRole('contentinfo');
+    expect(footer).toBeInTheDocument();
+    expect(footer).toHaveTextContent('© 2021 Tom Lamb. All rights reserved.');
+  })
+})
