@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/currency-app-react/static/css/main.e0a6a5a3.chunk.css",
-    "main.js": "/currency-app-react/static/js/main.b41dd7f7.chunk.js",
-    "main.js.map": "/currency-app-react/static/js/main.b41dd7f7.chunk.js.map",
-    "runtime-main.js": "/currency-app-react/static/js/runtime-main.915c1e42.js",
-    "runtime-main.js.map": "/currency-app-react/static/js/runtime-main.915c1e42.js.map",
-    "static/js/2.7ab7f519.chunk.js": "/currency-app-react/static/js/2.7ab7f519.chunk.js",
-    "static/js/2.7ab7f519.chunk.js.map": "/currency-app-react/static/js/2.7ab7f519.chunk.js.map",
-    "static/js/3.f7d677ef.chunk.js": "/currency-app-react/static/js/3.f7d677ef.chunk.js",
-    "static/js/3.f7d677ef.chunk.js.map": "/currency-app-react/static/js/3.f7d677ef.chunk.js.map",
+    "main.css": "/currency-app-react/static/css/main.abdd3197.chunk.css",
+    "main.js": "/currency-app-react/static/js/main.f6abff7a.chunk.js",
+    "main.js.map": "/currency-app-react/static/js/main.f6abff7a.chunk.js.map",
+    "runtime-main.js": "/currency-app-react/static/js/runtime-main.fb1e1d5a.js",
+    "runtime-main.js.map": "/currency-app-react/static/js/runtime-main.fb1e1d5a.js.map",
+    "static/js/2.ac85a5b5.chunk.js": "/currency-app-react/static/js/2.ac85a5b5.chunk.js",
+    "static/js/2.ac85a5b5.chunk.js.map": "/currency-app-react/static/js/2.ac85a5b5.chunk.js.map",
+    "static/js/3.02e199fa.chunk.js": "/currency-app-react/static/js/3.02e199fa.chunk.js",
+    "static/js/3.02e199fa.chunk.js.map": "/currency-app-react/static/js/3.02e199fa.chunk.js.map",
     "index.html": "/currency-app-react/index.html",
-    "static/css/main.e0a6a5a3.chunk.css.map": "/currency-app-react/static/css/main.e0a6a5a3.chunk.css.map",
-    "static/js/2.7ab7f519.chunk.js.LICENSE.txt": "/currency-app-react/static/js/2.7ab7f519.chunk.js.LICENSE.txt"
+    "static/css/main.abdd3197.chunk.css.map": "/currency-app-react/static/css/main.abdd3197.chunk.css.map",
+    "static/js/2.ac85a5b5.chunk.js.LICENSE.txt": "/currency-app-react/static/js/2.ac85a5b5.chunk.js.LICENSE.txt",
+    "static/media/tom-lamb.04182375.svg": "/currency-app-react/static/media/tom-lamb.04182375.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.915c1e42.js",
-    "static/js/2.7ab7f519.chunk.js",
-    "static/css/main.e0a6a5a3.chunk.css",
-    "static/js/main.b41dd7f7.chunk.js"
+    "static/js/runtime-main.fb1e1d5a.js",
+    "static/js/2.ac85a5b5.chunk.js",
+    "static/css/main.abdd3197.chunk.css",
+    "static/js/main.f6abff7a.chunk.js"
   ]
 }
