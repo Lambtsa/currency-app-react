@@ -1,0 +1,67 @@
+@import '../../styles/variables.scss';
+.switch {
+  position: relative;
+  width: 65px;
+  display: inline-block;
+  padding: 0;
+}
+.switch-checkbox {
+  display: none;
+}
+.switch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 20px;
+  margin: 0;
+}
+.switch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+  &:before,
+  &:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 1.9rem;
+    padding: 0;
+    line-height: 2rem;
+    font-size: 1.6rem;
+  }
+  &:before {
+    content: "🌜";
+    text-transform: uppercase;
+    padding-left: .3rem;
+    text-align: left;
+    background-color: $black;
+  }
+  &:after {
+    content: "🌞";
+    text-transform: uppercase;
+    padding-right: .2rem;
+    text-align: right;
+    background-color: $dark-grey;
+  }
+}
+.switch-switch {
+  display: block;
+  width: 25px;
+  margin: 3px;
+  background: $white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 2.1rem;
+  border-radius: 1.2rem;
+  transition: all 0.3s ease-in 0s;
+}
+.switch-checkbox:checked + .switch-label {
+  .switch-inner {
+    margin-left: 0;
+  }
+  .switch-switch {
+    right: 0px;
+  }
+}

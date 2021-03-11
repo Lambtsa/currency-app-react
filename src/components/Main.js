@@ -11,7 +11,10 @@ const Main = () => {
       .then(data => {
         setCurrencies(data.rates);
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        /* eslint-disable-next-line */
+        console.log(err)
+      });
   }, []);
 
   useEffect(() => {
@@ -24,7 +27,10 @@ const Main = () => {
           .then(data => {
             setCurrencies(data.rates);
           })
-          .catch(err => console.log(err));
+          .catch(err => {
+            /* eslint-disable-next-line */
+            console.log(err)
+          });
       }
     }, 1000);
     return () => {
@@ -36,7 +42,7 @@ const Main = () => {
     <>
       <main>
         <section className="main__container">
-          <p>{counter}</p>
+          <p className="counter">{`${counter} seconds until refresh...`}</p>
           {currencies && currencies.map(el => <CurrencyCard key={el.name} details={el} />) }
         </section>
       </main>

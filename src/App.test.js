@@ -3,8 +3,8 @@ import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import App from './App';
 import Header from './components/Header';
-// import Main from './components/Main';
-// import CurrencyCard from './components/CurrencyCard';
+import Main from './components/Main';
+import CurrencyCard from './components/CurrencyCard';
 import Footer from './components/Footer';
 
 const mockData = {
@@ -69,17 +69,23 @@ describe('The Header component', () => {
 //   })
 // });
 
-// describe('The CurrencyCard component', () => {
-//   test('renders a card with with an img a currency name and a subtitle', () => {
-//     render(<CurrencyCard />);
-//     const article = screen.getByRole('article');
-//     const img = screen.getByRole('img');
-//     const title = screen.getByRole('heading');
-//     expect(article).toBeInTheDocument();
-//     expect(img).toBeInTheDocument();
-//     expect(title).toBeInTheDocument();
-//   });
-// })
+describe('The CurrencyCard component', () => {
+  test('renders a card with with an img a currency name and a subtitle', () => {
+    const mockCardDetails = {
+      initials: 'AUD',
+      name: 'Australian Dollar',
+      rate: 3,
+      logo: '/assets/flags/aud.webp',
+    }
+    render(<CurrencyCard details={mockCardDetails}/>);
+    const article = screen.getByRole('article');
+    const img = screen.getByRole('img');
+    const title = screen.getByRole('heading');
+    expect(article).toBeInTheDocument();
+    expect(img).toBeInTheDocument();
+    expect(title).toBeInTheDocument();
+  });
+})
 
 describe('The footer component', () => {
   test('should render a footer', () => {

@@ -60,10 +60,17 @@ button {
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   max-width: 1140px;
   width: 100%;
   margin: 0 auto;
+}
+.counter {
+  padding: 1rem;
+  background-color: $dark-grey;
+  color: $white;
+  text-align: center;
+  border-radius: 10px;
 }
 /*
   CurrencyCard component
@@ -74,7 +81,8 @@ button {
   justify-content: space-between;
   padding: 1rem;
   border: 1px solid $dark-grey;
-  border-radius: 20px;
+  border-radius: 10px;
+  background-color: $white;
   &__details {
     display: flex;
   }
@@ -97,7 +105,7 @@ button {
   }
   &__rates > .article__subtitle {
     font-size: 1rem;
-    color: $error;
+    color: $dark-grey;
   }
 }
 /*
@@ -105,7 +113,7 @@ button {
 */
 .footer {
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 0;
   background-color: $light-grey;
   color: $dark-grey;
 }
