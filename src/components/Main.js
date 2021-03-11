@@ -42,7 +42,7 @@ const Main = () => {
     <>
       <main>
         <section className="main__container">
-          <p className="counter">{`${counter} seconds until refresh...`}</p>
+          <p className="counter">{`${counter} minutes until refresh...`}</p>
           {currencies && currencies.map(el => <CurrencyCard key={el.name} details={el} />) }
         </section>
       </main>
