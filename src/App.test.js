@@ -79,10 +79,10 @@ describe('The CurrencyCard component', () => {
     }
     render(<CurrencyCard details={mockCardDetails}/>);
     const article = screen.getByRole('article');
-    const img = screen.getByRole('img');
+    const imgs = screen.getAllByRole('img');
     const title = screen.getByRole('heading');
     expect(article).toBeInTheDocument();
-    expect(img).toBeInTheDocument();
+    expect(imgs).toHaveLength(2);
     expect(title).toBeInTheDocument();
   });
 })

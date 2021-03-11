@@ -5,15 +5,15 @@ import fetchData from '../helpers/fetchData';
 const Main = () => {
   const [currencies, setCurrencies] = useState([]);
   const [counter, setCounter] = useState(60);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     fetchData()
       .then(data => {
         setCurrencies(data.rates);
       })
-      .catch(err => {
-        /* eslint-disable-next-line */
-        console.log(err)
+      .catch(() => {
+        setError(true);
       });
   }, []);
 
@@ -27,9 +27,8 @@ const Main = () => {
           .then(data => {
             setCurrencies(data.rates);
           })
-          .catch(err => {
-            /* eslint-disable-next-line */
-            console.log(err)
+          .catch(() => {
+            setError(true);
           });
       }
     }, 1000);
@@ -43,7 +42,9 @@ const Main = () => {
       <main>
         <section className="main__container">
           <p className="counter">{`${counter} minutes until refresh...`}</p>
-          {currencies && currencies.map(el => <CurrencyCard key={el.name} details={el} />) }
+          {currencies && currencies
+            .map(el => <CurrencyCard key={el.name} details={el} />) }
+          {error && <p className="error__message">There has been an error. Please try again.</p>}
         </section>
       </main>
     </>

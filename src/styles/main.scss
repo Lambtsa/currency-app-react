@@ -11,7 +11,7 @@ h1, h2 {
   margin-bottom: 1rem;
 }
 h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 h2 {
   font-size: 1.5rem;
@@ -25,6 +25,13 @@ button {
   display: grid;
   grid-template-rows: max-content auto max-content;
   min-height: 100vh;
+}
+.error__message {
+  padding: 1rem;
+  background-color: $error;
+  color: $white;
+  text-align: center;
+  border-radius: 10px;
 }
 /*
   Header component
@@ -80,11 +87,19 @@ button {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  border: 1px solid $dark-grey;
+  border: 2px solid $dark-grey;
   border-radius: 10px;
   background-color: $white;
   &__details {
     display: flex;
+  }
+  &.order-1 { 
+    order: 1;
+    border: 2px solid $error;
+  }
+  &.order-2 {
+    order: 2;
+    
   }
   &__img {
     border-radius: 3rem;
@@ -109,6 +124,9 @@ button {
   }
   &__like {
     width: 1.5rem;
+  }
+  &__btn {
+    width: 100%;
   }
 }
 /*
