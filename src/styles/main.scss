@@ -129,9 +129,8 @@ button {
   border: 1px solid $error !important;
   }
   .form__input {
-    background-color: $white;
+    background-color: $light-grey;
     color: $dark-grey;
-    border: 1px solid $dark-grey;
     &::placeholder {
       color: #A1A1A1;
     }
