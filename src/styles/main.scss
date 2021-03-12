@@ -6,7 +6,7 @@ body {
   background-color: $white;
   color: $dark-grey;
 }
-h1, h2 {
+h1, h2, h3 {
   text-transform: capitalize;
   margin-bottom: 1rem;
 }
@@ -99,6 +99,91 @@ button {
     background-color: $light-grey;
     color: $dark-grey;
   }
+}
+/*
+  EmailForm Cmponent
+*/
+.form__container.dark {
+  .form__error {
+    border: 1px solid $error !important;
+  }
+  .form__input {
+    background-color: $dark-grey;
+    color: $white;
+    border: none;
+    &::placeholder {
+      color: $grey;
+    }
+  }
+  .form__btn {
+    color: $dark-grey;
+    background-color: $white;
+    &:hover {
+      background: linear-gradient(135deg, #9785E0, #85A9E0);
+      color: $white;
+    }
+  }
+}
+.form__container.light {
+  .form__error {
+  border: 1px solid $error !important;
+  }
+  .form__input {
+    background-color: $white;
+    color: $dark-grey;
+    border: 1px solid $dark-grey;
+    &::placeholder {
+      color: #A1A1A1;
+    }
+  }
+  .form__btn {
+    color: $white;
+    background-color: $dark-grey;
+    &:hover {
+      background: linear-gradient(135deg, #9785E0, #85A9E0);
+      color: $white;
+    }
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  text-align: center;
+}
+.form__input {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  &::placeholder {
+    font-size: 1rem;
+  }
+}
+.form__btn {
+  padding: 1.1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  outline: none;
+  font-weight: 700;
+  &:focus { 
+    outline: none;
+  }
+}
+.form__errorMessage {
+  color: $white;
+  text-align: center;
+  padding: 1rem;
+  background-color: $error;
+  border-radius: 10px;
+}
+.form__validMessage {
+  color: $white;
+  text-align: center;
+  padding: 1rem;
+  background-color: $valid;
+  border-radius: 10px;
 }
 /*
   CurrencyCard component

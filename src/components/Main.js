@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import CurrencyCard from './CurrencyCard';
 import fetchData from '../helpers/fetchData';
 import { ThemeContext } from '../helpers/ThemeProvider';
+import EmailForm from './EmailForm';
 
 const Main = () => {
   const { theme } = useContext(ThemeContext);
@@ -43,6 +44,7 @@ const Main = () => {
     <>
       <main className={`main ${theme}`}>
         <section className="main__container">
+          <EmailForm />
           <p className={`counter ${theme}`}>{`${counter} seconds until refresh...`}</p>
           {currencies && currencies
             .map(el => <CurrencyCard key={el.name} details={el} />) }
