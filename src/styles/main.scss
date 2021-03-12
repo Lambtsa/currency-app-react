@@ -135,17 +135,24 @@ button {
     height: 3rem;
   }
   &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 0 1rem;
   }
   &__title {
     font-size: 1.5rem;
-    margin-bottom: .5rem;
+    margin-bottom: .2rem;
   }
   &__subtitle {
     font-size: .8rem;
   }
-  &__rates > .article__subtitle {
+  &__rates {
+    text-align: right;
+  }
+  &__rate {
     font-size: 1rem;
+    margin-bottom: .2rem;
   }
   &__like {
     width: 1.5rem;
@@ -159,7 +166,7 @@ button {
 */
 .footer {
   text-align: center;
-  padding: 1rem 0;
+  padding: 1rem;
   &.dark {
     background-color: $dark-grey;
     color: $white;
@@ -168,4 +175,7 @@ button {
     background-color: $light-grey;
     color: $dark-grey;
   }
+}
+.footer__img {
+  width: 2rem;
 }

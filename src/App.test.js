@@ -92,7 +92,9 @@ describe('The footer component', () => {
   test('should render a footer', () => {
     render(<ThemeProvider><Footer /></ThemeProvider>);
     const footer = screen.getByRole('contentinfo');
+    const img = screen.getByRole('img');
     expect(footer).toBeInTheDocument();
-    expect(footer).toHaveTextContent('© 2021 Tom Lamb. All rights reserved.');
+    expect(img).toBeInTheDocument();
+    expect(img).toHaveClass('footer__img');
   })
 })
