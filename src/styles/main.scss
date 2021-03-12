@@ -39,7 +39,14 @@ button {
 .header {
   padding: 1rem 0;
   z-index: 1000;
-  background-color: $light-grey;
+  &.light {
+    background-color: $light-grey;
+    color: $dark-grey;
+  }
+  &.dark {
+    background-color: $dark-grey;
+    color: $white;
+  }
   .header__container {
     display: flex;
     align-items: center;
@@ -63,6 +70,14 @@ button {
 /*
   Main component
 */
+.main.dark {
+  background-color: $black;
+  color: $white;
+}
+.main.light {
+  background-color: $white;
+  color: $dark-grey;
+}
 .main__container {
   display: grid;
   gap: 1rem;
@@ -74,10 +89,16 @@ button {
 }
 .counter {
   padding: 1rem;
-  background-color: $dark-grey;
-  color: $white;
   text-align: center;
   border-radius: 10px;
+  &.dark {
+    background-color: $dark-grey;
+    color: $white;
+  }
+  &.light {
+    background-color: $light-grey;
+    color: $dark-grey;
+  }
 }
 /*
   CurrencyCard component
@@ -87,9 +108,14 @@ button {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  border: 2px solid $dark-grey;
   border-radius: 10px;
-  background-color: $white;
+  border: 2px solid $dark-grey;
+  &.dark {
+    background-color: $dark-grey;
+  }
+  &.light {
+    background-color: $white;
+  }
   &__details {
     display: flex;
   }
@@ -120,7 +146,6 @@ button {
   }
   &__rates > .article__subtitle {
     font-size: 1rem;
-    color: $dark-grey;
   }
   &__like {
     width: 1.5rem;
@@ -135,6 +160,12 @@ button {
 .footer {
   text-align: center;
   padding: 1rem 0;
-  background-color: $light-grey;
-  color: $dark-grey;
+  &.dark {
+    background-color: $dark-grey;
+    color: $white;
+  }
+  &.light {
+    background-color: $light-grey;
+    color: $dark-grey;
+  }
 }

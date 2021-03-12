@@ -1,9 +1,10 @@
 import { render, screen, cleanup } from '@testing-library/react';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
+import { ThemeProvider } from "./helpers/ThemeProvider";
 import App from './App';
 import Header from './components/Header';
-import Main from './components/Main';
+// import Main from './components/Main';
 import CurrencyCard from './components/CurrencyCard';
 import Footer from './components/Footer';
 
@@ -47,7 +48,7 @@ describe('The Header component', () => {
     expect(title).toBeInTheDocument();
   });
   test('renders a header with my logo and specific title', () => {
-    render(<Header />);
+    render(<ThemeProvider><Header /></ThemeProvider>);
     const header = screen.getByRole('banner');
     const title = header.querySelector('h1');
     const img = screen.getByRole('img')
@@ -77,19 +78,19 @@ describe('The CurrencyCard component', () => {
       rate: 3,
       logo: '/assets/flags/aud.webp',
     }
-    render(<CurrencyCard details={mockCardDetails}/>);
+    render(<ThemeProvider><CurrencyCard details={mockCardDetails}/></ThemeProvider>);
     const article = screen.getByRole('article');
-    const imgs = screen.getAllByRole('img');
+    const img = screen.getByRole('img');
     const title = screen.getByRole('heading');
     expect(article).toBeInTheDocument();
-    expect(imgs).toHaveLength(2);
+    expect(img).toBeInTheDocument();
     expect(title).toBeInTheDocument();
   });
 })
 
 describe('The footer component', () => {
   test('should render a footer', () => {
-    render(<Footer />);
+    render(<ThemeProvider><Footer /></ThemeProvider>);
     const footer = screen.getByRole('contentinfo');
     expect(footer).toBeInTheDocument();
     expect(footer).toHaveTextContent('© 2021 Tom Lamb. All rights reserved.');

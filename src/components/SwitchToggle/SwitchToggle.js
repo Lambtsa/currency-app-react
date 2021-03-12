@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './SwitchToggle.scss';
-// import { ThemeContext } from '../../helpers/ThemeProvider';
+import { ThemeContext } from '../../helpers/ThemeProvider';
 
 /* eslint-disable */
 const SwitchToggle = () => {
-  // const { theme, handleThemeToggle } = useContext(ThemeContext);
+  const { theme, handleThemeToggle } = useContext(ThemeContext);
 
   return (
     <>
@@ -12,10 +12,10 @@ const SwitchToggle = () => {
         <input
           type="checkbox"
           className="switch-checkbox"
-          // onChange={handleThemeToggle}
+          onChange={handleThemeToggle}
           name="themeToggle"
           id="themeToggle"
-          // checked={theme === 'dark'} 
+          checked={theme === 'dark'} 
           />
         <label className="switch-label" htmlFor="themeToggle">
           <span className="switch-inner" />

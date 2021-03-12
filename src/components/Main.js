@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import CurrencyCard from './CurrencyCard';
 import fetchData from '../helpers/fetchData';
+import { ThemeContext } from '../helpers/ThemeProvider';
 
 const Main = () => {
+  const { theme } = useContext(ThemeContext);
   const [currencies, setCurrencies] = useState([]);
   const [counter, setCounter] = useState(60);
   const [error, setError] = useState(false);
@@ -39,9 +41,9 @@ const Main = () => {
 
   return (
     <>
-      <main>
+      <main className={`main ${theme}`}>
         <section className="main__container">
-          <p className="counter">{`${counter} minutes until refresh...`}</p>
+          <p className={`counter ${theme}`}>{`${counter} seconds until refresh...`}</p>
           {currencies && currencies
             .map(el => <CurrencyCard key={el.name} details={el} />) }
           {error && <p className="error__message">There has been an error. Please try again.</p>}
