@@ -22,7 +22,6 @@ const EmailForm = () => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setEmailSent(false);
-      setEmail('');
     }, 3000);
     return () => {
       clearTimeout(timeoutId);
@@ -45,6 +44,7 @@ const EmailForm = () => {
       })
         .then(() => {
           setEmailSent(true);
+          setEmail('');
         })
         .catch(() => {
           setError(true);
