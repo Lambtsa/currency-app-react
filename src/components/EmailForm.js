@@ -31,7 +31,7 @@ const EmailForm = () => {
 
   const handleFormSubmit = e => {
     e.preventDefault();
-    if (!regex.test(email)) {
+    if (regex.test(email) === false) {
       setError(true);
       setEmailSent(false);
     } else {
@@ -43,7 +43,6 @@ const EmailForm = () => {
         },
         body: JSON.stringify({ email }),
       })
-        .then(response => response.json())
         .then(() => {
           setEmailSent(true);
         })
