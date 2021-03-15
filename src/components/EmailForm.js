@@ -44,8 +44,7 @@ const EmailForm = () => {
         body: JSON.stringify({ email }),
       })
         .then(response => response.json())
-        .then(data => {
-          console.log(data);
+        .then(() => {
           setEmailSent(true);
         })
         .catch(() => {

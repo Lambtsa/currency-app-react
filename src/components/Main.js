@@ -13,7 +13,7 @@ const Main = () => {
   useEffect(() => {
     fetchData()
       .then(data => {
-        setCurrencies(data.rates);
+        setCurrencies(data);
       })
       .catch(() => {
         setError(true);
@@ -28,7 +28,7 @@ const Main = () => {
         setCounter(60);
         fetchData()
           .then(data => {
-            setCurrencies(data.rates);
+            setCurrencies(data);
           })
           .catch(() => {
             setError(true);
