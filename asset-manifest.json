@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/currency-app-react/static/css/main.5d288d08.chunk.css",
-    "main.js": "/currency-app-react/static/js/main.d9579b8b.chunk.js",
-    "main.js.map": "/currency-app-react/static/js/main.d9579b8b.chunk.js.map",
+    "main.css": "/currency-app-react/static/css/main.2dcc0440.chunk.css",
+    "main.js": "/currency-app-react/static/js/main.bbe9b83c.chunk.js",
+    "main.js.map": "/currency-app-react/static/js/main.bbe9b83c.chunk.js.map",
     "runtime-main.js": "/currency-app-react/static/js/runtime-main.fb1e1d5a.js",
     "runtime-main.js.map": "/currency-app-react/static/js/runtime-main.fb1e1d5a.js.map",
     "static/js/2.79f3d24a.chunk.js": "/currency-app-react/static/js/2.79f3d24a.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.02e199fa.chunk.js": "/currency-app-react/static/js/3.02e199fa.chunk.js",
     "static/js/3.02e199fa.chunk.js.map": "/currency-app-react/static/js/3.02e199fa.chunk.js.map",
     "index.html": "/currency-app-react/index.html",
-    "static/css/main.5d288d08.chunk.css.map": "/currency-app-react/static/css/main.5d288d08.chunk.css.map",
+    "static/css/main.2dcc0440.chunk.css.map": "/currency-app-react/static/css/main.2dcc0440.chunk.css.map",
     "static/js/2.79f3d24a.chunk.js.LICENSE.txt": "/currency-app-react/static/js/2.79f3d24a.chunk.js.LICENSE.txt",
     "static/media/github-dark.2a516804.svg": "/currency-app-react/static/media/github-dark.2a516804.svg",
     "static/media/github-light.02f4c054.svg": "/currency-app-react/static/media/github-light.02f4c054.svg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.fb1e1d5a.js",
     "static/js/2.79f3d24a.chunk.js",
-    "static/css/main.5d288d08.chunk.css",
-    "static/js/main.d9579b8b.chunk.js"
+    "static/css/main.2dcc0440.chunk.css",
+    "static/js/main.bbe9b83c.chunk.js"
   ]
 }
