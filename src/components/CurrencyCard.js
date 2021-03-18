@@ -19,8 +19,10 @@ const CurrencyCard = ({ details }) => {
           </div>
         </div>
         <div className="article__rates">
-          <p className="article__rate">{details.rate}</p>
-          <p className="article__subtitle">{`1 EUR = ${details.rate}`}</p>
+          <p className="article__rate">{`1 EUR = ${details.rate} ${details.initials} `}</p>
+          <p className={`article__subtitle ${details.rateDelta > 0 ? 'positive' : 'negative'}`}>
+            {details.rateDelta > 0 ? `+${details.rateDelta * 100}%` : `${details.rateDelta * 100}%` }
+          </p>
         </div>
       </article>
     </>

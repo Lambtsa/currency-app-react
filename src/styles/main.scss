@@ -229,7 +229,13 @@ button {
     margin-bottom: .2rem;
   }
   &__subtitle {
-    font-size: .8rem;
+    font-size: .9rem;
+    &.positive {
+      color: $valid;
+    }
+    &.negative {
+      color: $error;
+    }
   }
   &__rates {
     text-align: right;
